@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOLPAV | Toldos e Coberturas Premium</title>
+    <meta name="description" content="Soluções em toldos cortina, capota, articulado e fixo. Proteção e elegância sob medida para seu ambiente.">
+    
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-orange: #D97706;
+            --primary-brown: #451A03;
+            --light-bg: #FFFBEB;
+            --white: #FFFFFF;
+            --text-dark: #1F2937;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--primary-brown); }
+
+        /* HEADER */
+        header {
+            background-color: var(--white);
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.8rem; font-weight: 700; color: var(--primary-orange); letter-spacing: 2px; text-transform: uppercase; }
+        .logo span { color: var(--primary-brown); }
+
+        .btn-header {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .btn-header:hover { background-color: var(--primary-brown); }
+
+        /* HERO SECTION */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(69, 26, 3, 0.7), rgba(69, 26, 3, 0.5)), url(toldos/prinTOLDO.webp);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 { font-size: 3.5rem; color: var(--white); margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero-content p { font-size: 1.2rem; color: #f0f0f0; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        .btn-cta {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            display: inline-block;
+            border: 2px solid var(--primary-orange);
+        }
+        .btn-cta:hover { background-color: transparent; border-color: var(--white); color: var(--white); }
+
+        /* SEÇÃO DE PRODUTOS (NOVO LAYOUT) */
+        .product-section {
+            padding: 5rem 5%;
+            background-color: var(--white);
+            border-bottom: 1px solid #eee;
+        }
+        
+        .product-section:nth-child(even) { background-color: var(--light-bg); }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .section-header .divider { width: 80px; height: 3px; background-color: var(--primary-orange); margin: 0 auto; }
+
+        /* Container do Produto (Grid) */
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .product-container { grid-template-columns: 1fr 1fr; }
+            .product-content { order: 2; } /* Texto na direita */
+            .carousel-wrapper { order: 1; } /* Imagem na esquerda */
+            
+            /* Inverte para alternar visualmente */
+            .reverse-layout .product-content { order: 1; }
+            .reverse-layout .carousel-wrapper { order: 2; }
+        }
+
+        .product-content h3 { font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--primary-brown); }
+        .product-content p { font-size: 1.1rem; color: #555; margin-bottom: 1.5rem; line-height: 1.8; }
+        
+        .specs-list { list-style: none; margin-bottom: 2rem; }
+        .specs-list li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+        .specs-list li::before { content: '•'; color: var(--primary-orange); font-weight: bold; position: absolute; left: 0; }
+
+        /* CARROSSEL INDIVIDUAL */
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            background: #000;
+        }
+
+        .carousel-track-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 400px; /* Altura fixa para uniformidade */
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: var(--primary-brown);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover { background-color: var(--primary-orange); color: white; }
+        .prev-btn { left: 15px; }
+        .next-btn { right: 15px; }
+
+        /* FOOTER & FLOAT */
+        footer { background-color: #2c1102; color: #aaa; text-align: center; padding: 2rem; font-size: 0.9rem; }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 2000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #1ebc57; }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .carousel-slide { height: 250px; }
+            .product-container { gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">STOL<span>PAV</span></div>
+        <a href="https://wa.me/5500000000000?text=Olá, vim pelo site e gostaria de um orçamento." class="btn-header" id="btn-header-wa">Orçamento</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Proteção e Elegância Sob Medida</h1>
+            <p>Especialistas em toldos de alto padrão. Projetos exclusivos para transformar e proteger seu ambiente.</p>
+            <a href="https://wa.me/5500000000000?text=Olá, vim pelo site e gostaria de um orçamento." class="btn-cta" id="btn-hero-wa">Solicitar Orçamento</a>
+        </div>
+    </section>
+
+    <!-- 1. TOLDO CORTINA -->
+    <section class="product-section" id="toldo-cortina">
+        <div class="section-header">
+            <h2>Toldo Cortina</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="product-container">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track1">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track1">
+                        <li class="carousel-slide"><img src="toldos/cortina-010.webp" alt="Toldo Cortina 1"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina02.webp" alt="Toldo Cortina 2"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina03.webp" alt="Toldo Cortina 3"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina-011.webp" alt="Toldo Cortina 3"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina-012.webp" alt="Toldo Cortina 3"></li>
+
+
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track1">&#10095;</button>
+            </div>
+            <div class="product-content">
+                <h3>Versatilidade e Proteção</h3>
+                <p>O Toldo Rolô retrátil, também conhecido como Toldo Cortina, possui braços de sustentação para uma proteção sol e chuva. Removendo os braços é possível esticar o toldo até o chão, modificando sua utilização em forma de cortina, protegendo ainda mais da ação do Vento, Sol e Chuva.</p>
+                <ul class="specs-list">
+                    <li>Estrutura em Alumínio (com opção de pintura eletrostática)</li>
+                    <li>Lonas vinílicas, náuticas e tela solar.</li>
+                    <li>Ideal para varandas, sacadas e áreas gourmet</li>
+                    <li>Feito sob medida, projetos personalizados</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Cortina." class="btn-cta" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Orçar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1.B TOLDO CORTINA COM BRAÇO (NOVA SEÇÃO) -->
+    <section class="product-section" id="toldo-cortina-braco">
+        <div class="section-header">
+            <h2>Toldo Cortina com Braço</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="product-container reverse-layout">
+            <div class="product-content">
+                <h3>Flexibilidade e Controle de Luminosidade</h3>
+                <p>O Toldo Cortina com Braço Pivotante une a praticidade do fechamento vertical com a flexibilidade da projeção frontal. Seus braços reguláveis permitem projetar a lona para frente, garantindo excelente circulação de ar e sombra agradável, sem bloquear completamente a visão externa ou a ventilação natural.</p>
+                <ul class="specs-list">
+                    <li>Estrutura em Alumínio (com opção de pintura eletrostática)</li>
+                    <li>Lonas vinílicas, náuticas e tela solar.</li>
+                    <li>Braços em alumínio com regulagem de inclinação</li>
+                    <li>Acionamento manual ou motorizado</li>
+                    <li>Ideal para varandas, sacadas e áreas gourmet</li>
+                    <li>Fixação robusta que garante estabilidade contra ventos</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Cortina com Braço." class="btn-cta" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Orçar Agora</a>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track_cortina_braco">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track_cortina_braco">
+                        <!-- Substitua os caminhos das imagens conforme necessário -->
+                        <li class="carousel-slide"><img src="toldos/cortina-brac01.webp" alt="Toldo Cortina com Braço 1"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina-braco014.webp" alt="Toldo Cortina com Braço 2"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina-brac03.webp" alt="Toldo Cortina com Braço 3"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track_cortina_braco">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. TOLDO CAPOTA -->
+    <section class="product-section" id="toldo-capota">
+        <div class="section-header">
+            <h2>Toldo Capota</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="product-container">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track2">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track2">
+                        <li class="carousel-slide"><img src="toldos/capota-09.webp" alt="Toldo Capota 1"></li>
+                        <li class="carousel-slide"><img src="toldos/capota-07.webp" alt="Toldo Capota 2"></li>
+                        <li class="carousel-slide"><img src="toldos/capota03.webp" alt="Toldo Capota 3"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track2">&#10095;</button>
+            </div>
+            <div class="product-content">
+                <h3>Ideal para Janelas de Apartamentos e Casas</h3>
+                <p>Modelo ideal para janelas de apartamentos e casas, podendo ser de forma semi-curva. Proporciona além da proteção contra os raios ultravioletas, uma proteção contra chuvas, sendo a melhor escolha em termos de custo e benefício. Distingue-se pelos modelos móveis (recolhíveis) e fixos.</p>
+                <ul class="specs-list">
+                    <li>Estrutura em Alumínio (com opção de pintura eletrostática)</li>
+                    <li>Lonas vinílicas, náuticas e tela solar.</li>
+                    <li>Acionamento manual ou motorizado</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Capota." class="btn-cta" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Orçar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. TOLDO ARTICULADO -->
+    <section class="product-section" id="toldo-articulado">
+        <div class="section-header">
+            <h2>Toldo Articulado</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="product-container reverse-layout">
+            <div class="product-content">
+                <h3>Sofisticação e Design Moderno</h3>
+                <p>Sofisticação, conforto e Design moderno. Essa são algumas das características do Toldo Articulado. Sua instalação pode ser com acionamento automatizado ou manual. Utilizado em empresas ou residências, sua diversidade de tamanho facilita o fechamento de seus braços onde o toldo fica embutido com sua lona.</p>
+                <ul class="specs-list">
+                    <li>Estrutura em Alumínio(com opção de pintura eletrostática)</li>
+                    <li>Lonas vinílicas, náuticas e tela solar.</li>
+                    <li>Design Moderno e Clean</li>
+                    <li>Braços articulados de alta resistência</li>
+                    <li>Acionamento manual ou motorizado</li>
+                    <li>Feito sob medida, projeto personalizado</li>
+                    <li>Lonas vinílicas ou acrílicas com tratamento anti-UV</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Articulado." class="btn-cta" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Orçar Agora</a>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track3">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track3">
+                        <li class="carousel-slide"><img src="toldos/articulado02.webp" alt="Toldo Articulado 1"></li>
+                        <li class="carousel-slide"><img src="toldos/articulado05.webp" alt="Toldo Articulado 2"></li>
+                        <li class="carousel-slide"><img src="toldos/articulado06.webp" alt="Toldo Articulado 3"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track3">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TOLDO FIXO -->
+    <section class="product-section" id="toldo-fixo">
+        <div class="section-header">
+            <h2>Toldo Fixo</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="product-container">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track4">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track4">
+                        <li class="carousel-slide"><img src="toldos/fixo01.webp" alt="Toldo Fixo 1"></li>
+                        <li class="carousel-slide"><img src="toldos/fixo03.webp" alt="Toldo Fixo 2"></li>
+                        <li class="carousel-slide"><img src="toldos/fixo05.webp" alt="Toldo Fixo 3"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track4">&#10095;</button>
+            </div>
+            <div class="product-content">
+                <h3>Solução Definitiva e Elegante</h3>
+                <p>Com estrutura resistente e design moderno e arrojado, os Toldos Fixos são personalizados de acordo com a solicitação do cliente. Integram-se perfeitamente na decoração das residências e na identidade visual dos estabelecimentos comerciais, proporcionando excelente aproveitamento na iluminação natural.</p>
+                <ul class="specs-list">
+                    <li>Estrutura em Alumínio(com opção de pintura eletrostática)</li>
+                    <li>Lonas vinílicas, náuticas e tela solar.</li>
+                    <li>Pintura automotiva de alta durabilidade</li>
+                    <li>Proteção permanente contra intempéries</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Fixo." class="btn-cta" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Orçar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 STOLPAV Toldos e Coberturas. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/5500000000000?text=Olá, vim pelo site e gostaria de um orçamento." class="whatsapp-float" id="whatsapp-float" target="_blank">
+        <svg style="width:35px;height:35px;fill:white;" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Lógica para Múltiplos Carrosséis Independentes
+        const carousels = document.querySelectorAll('.carousel-wrapper');
+
+        carousels.forEach(carousel => {
+            const track = carousel.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = carousel.querySelector('.next-btn');
+            const prevButton = carousel.querySelector('.prev-btn');
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const slideWidth = slides[0].getBoundingClientRect().width;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0; // Volta ao início
+                }
+                updateCarousel();
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = slides.length - 1; // Vai para o último
+                }
+                updateCarousel();
+            });
+
+            // Ajuste ao redimensionar a tela
+            window.addEventListener('resize', updateCarousel);
+        });
+
+        // Rastreamento de Cliques (Preparado para GTM)
+        const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+        whatsappLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                console.log("Clique no WhatsApp detectado!");
+                // Aqui o Google Tag Manager ouvirá o clique para disparar a conversão
+            });
+        });
+    </script>
+</body>
+</html>
