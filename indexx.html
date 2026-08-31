@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18361165490"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18361165490');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOLPAV | Toldos e Coberturas de Alto Padrão</title>
+    <meta name="description" content="Toldos cortina, capota, articulados e coberturas de engenharia, sob medida. Projeto, fabricação e instalação especializada. Solicite uma análise técnica gratuita.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --ink: #14181a;
+            --ink-soft: #2b302f;
+            --canvas: #f3eee1;
+            --canvas-deep: #e8e0cb;
+            --bronze: #93673c;
+            --bronze-deep: #6f4d2b;
+            --pine: #23392c;
+            --pine-light: #3c5a45;
+            --whatsapp: #25d366;
+            --whatsapp-deep: #1ebc57;
+            --muted: #5b564a;
+            --line: rgba(20, 24, 26, 0.14);
+            --white: #fffdf8;
+            --radius: 2px;
+            --ease: cubic-bezier(.4,0,.2,1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--ink);
+            background-color: var(--canvas);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        h1, h2, h3 { font-family: 'Fraunces', serif; color: var(--ink); font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; }
+
+        a { color: inherit; }
+        img { max-width: 100%; display: block; }
+        button { font-family: inherit; }
+
+        .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+        /* ============ STRIPE MOTIF (signature element) ============ */
+        .stripe-divider {
+            height: 10px;
+            width: 100%;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--pine) 0px, var(--pine) 26px,
+                var(--bronze) 26px, var(--bronze) 34px,
+                var(--canvas) 34px, var(--canvas) 60px
+            );
+        }
+
+        /* ============ HEADER ============ */
+        header {
+            background-color: var(--white);
+            padding: 0 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 76px;
+        }
+
+        .logo { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 0.04em; text-decoration: none; color: var(--ink); }
+        .logo span { color: var(--bronze); }
+
+        nav.main-nav { display: flex; align-items: center; gap: 2.2rem; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--ink-soft);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            padding: 4px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: 0;
+            width: 0; height: 2px;
+            background: var(--bronze);
+            transition: width 0.25s var(--ease);
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        .btn-header {
+            background-color: var(--pine);
+            color: var(--white);
+            padding: 0.7rem 1.4rem;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.25s var(--ease);
+            white-space: nowrap;
+        }
+        .btn-header:hover { background-color: var(--pine-light); }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 32px;
+            height: 24px;
+            position: relative;
+        }
+        .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 32px;
+            height: 2px;
+            background: var(--ink);
+            transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
+        }
+        .menu-toggle span { top: 11px; }
+        .menu-toggle span::before { top: -9px; }
+        .menu-toggle span::after { top: 9px; }
+        .menu-toggle.open span { background: transparent; }
+        .menu-toggle.open span::before { transform: translateY(9px) rotate(45deg); }
+        .menu-toggle.open span::after { transform: translateY(-9px) rotate(-45deg); }
+
+        /* ============ HERO ============ */
+        .hero {
+            min-height: 88vh;
+            background: linear-gradient(rgba(20, 24, 22, 0.62), rgba(20, 24, 22, 0.46)), url('toldos/prinTOLDO.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            padding: 0 5% 4.5rem 5%;
+            margin-top: 76px;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: repeating-linear-gradient(90deg, var(--bronze) 0 24px, transparent 24px 48px);
+            opacity: 0.85;
+        }
+        .hero-content { max-width: 680px; }
+        .hero-content .eyebrow { color: var(--canvas-deep); font-size: 0.95rem; font-weight: 500; margin-bottom: 1rem; }
+        .hero-content h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--white); margin-bottom: 1.2rem; }
+        .hero-content p { font-size: 1.15rem; color: #e9e4d6; margin-bottom: 2rem; max-width: 560px; font-weight: 400; }
+
+        .hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+
+        .btn-cta {
+            background-color: var(--whatsapp);
+            color: var(--white);
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: background-color 0.25s var(--ease);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-cta:hover { background-color: var(--whatsapp-deep); }
+        .btn-cta svg { width: 20px; height: 20px; fill: var(--white); }
+
+        .hero-proof { color: var(--canvas); font-size: 0.9rem; }
+        .hero-proof strong { font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--white); display: block; }
+
+        /* ============ CATÁLOGO RESUMO ============ */
+        .catalog-summary { padding: 5.5rem 5% 4rem 5%; background: var(--white); }
+        .section-header { max-width: 640px; margin-bottom: 3rem; }
+        .section-header .kicker { color: var(--bronze); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.6rem; }
+        .section-header h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); margin-bottom: 0.9rem; }
+        .section-header p { color: var(--muted); font-size: 1.05rem; }
+        .section-header.center { max-width: 620px; margin-left: auto; margin-right: auto; text-align: center; }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.6rem;
+        }
+        .catalog-card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            text-decoration: none;
+            background: var(--canvas);
+            transition: border-color 0.25s var(--ease);
+        }
+        .catalog-card:hover { border-color: var(--bronze); }
+        .catalog-card .thumb { height: 170px; overflow: hidden; background: var(--ink); }
+        .catalog-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .catalog-card .body { padding: 1.2rem 1.3rem 1.5rem 1.3rem; }
+        .catalog-card h3 { font-size: 1.15rem; margin-bottom: 0.4rem; color: var(--ink); }
+        .catalog-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.8rem; }
+        .catalog-card .go { font-size: 0.85rem; font-weight: 600; color: var(--pine); }
+
+        /* ============ DIFERENCIAIS ============ */
+        .features { padding: 5rem 5%; background-color: var(--canvas-deep); }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2.4rem;
+        }
+        .feature-card { padding: 0; }
+        .feature-icon { width: 42px; height: 42px; margin-bottom: 1.2rem; }
+        .feature-icon svg { width: 100%; height: 100%; stroke: var(--pine); fill: none; stroke-width: 1.4; }
+        .feature-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; font-family: 'Work Sans', sans-serif; font-weight: 600; }
+        .feature-card p { color: var(--muted); font-size: 0.95rem; }
+
+        /* ============ SEÇÃO DE PRODUTOS (DETALHADO) ============ */
+        .product-section { padding: 5.5rem 5%; background-color: var(--white); }
+        .product-section.alt { background-color: var(--canvas); }
+
+        .product-container {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        @media (min-width: 900px) {
+            .product-container { grid-template-columns: 1fr 1fr; }
+            .product-content { order: 2; }
+            .carousel-wrapper { order: 1; }
+            .reverse-layout .product-content { order: 1; }
+            .reverse-layout .carousel-wrapper { order: 2; }
+        }
+
+        .product-content .tag { color: var(--bronze); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.6rem; display: block; }
+        .product-content h3 { font-size: 1.9rem; margin-bottom: 1.3rem; }
+        .product-content p { font-size: 1.02rem; color: var(--muted); margin-bottom: 1.4rem; line-height: 1.8; }
+
+        .specs-list { list-style: none; margin-bottom: 1.8rem; }
+        .specs-list li { margin-bottom: 0.6rem; padding-left: 1.4rem; position: relative; font-weight: 500; font-size: 0.95rem; color: var(--ink-soft); }
+        .specs-list li::before { content: '—'; color: var(--bronze); font-weight: bold; position: absolute; left: 0; }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1.5px solid var(--pine);
+            color: var(--pine);
+            text-decoration: none;
+            padding: 0.65rem 1.4rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: var(--radius);
+            transition: all 0.25s var(--ease);
+        }
+        .btn-outline:hover { background: var(--pine); color: var(--white); }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: var(--ink);
+        }
+        .carousel-track-container { width: 100%; overflow: hidden; }
+        .carousel-track { display: flex; transition: transform 0.5s var(--ease); touch-action: pan-y; }
+        .carousel-slide { min-width: 100%; height: 400px; }
+        .carousel-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 253, 248, 0.92);
+            color: var(--ink);
+            border: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.1rem;
+            transition: background-color 0.25s var(--ease);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-btn:hover { background-color: var(--bronze); color: var(--white); }
+        .prev-btn { left: 14px; }
+        .next-btn { right: 14px; }
+        .carousel-dots { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; z-index: 10; }
+        .carousel-dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.45); transition: background 0.25s var(--ease); }
+        .carousel-dots span.active { background: var(--white); }
+
+        /* ============ GALERIA ============ */
+        .gallery { padding: 5.5rem 5%; background: var(--canvas-deep); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 160px;
+            gap: 0.8rem;
+        }
+        .gallery-grid a { display: block; overflow: hidden; border-radius: var(--radius); }
+        .gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s var(--ease); }
+        .gallery-grid a:hover img { transform: scale(1.06); }
+        .g-tall { grid-row: span 2; }
+        @media (max-width: 780px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+        }
+
+        /* ============ DEPOIMENTOS ============ */
+        .testimonials { padding: 5.5rem 5%; background: var(--white); }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+        .testimonial-card {
+            border: 1px solid var(--line);
+            padding: 2rem;
+            border-radius: var(--radius);
+            background: var(--canvas);
+        }
+        .testimonial-card .stars { color: var(--bronze); letter-spacing: 2px; margin-bottom: 1rem; font-size: 0.95rem; }
+        .testimonial-card p { color: var(--ink-soft); font-size: 0.98rem; margin-bottom: 1.4rem; font-style: italic; }
+        .testimonial-card .author { font-weight: 600; font-size: 0.9rem; }
+        .testimonial-card .location { color: var(--muted); font-size: 0.85rem; }
+
+        /* ============ PROCESSO ============ */
+        .process-section { padding: 5.5rem 5%; background-color: var(--pine); color: var(--white); }
+        .process-section .section-header h2, .process-section .section-header p { color: var(--white); }
+        .process-section .section-header .kicker { color: #b7c9bd; }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.2rem;
+            counter-reset: step;
+        }
+        .process-step { border-top: 2px solid var(--bronze); padding-top: 1.4rem; }
+        .step-number { font-family: 'Fraunces', serif; font-size: 2rem; color: var(--bronze); margin-bottom: 0.8rem; }
+        .process-step h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 0.5rem; font-family: 'Work Sans', sans-serif; font-weight: 600; }
+        .process-step p { font-size: 0.92rem; color: #cfd8d1; }
+
+        /* ============ FAQ ============ */
+        .faq-section { padding: 5.5rem 5%; background: var(--canvas); max-width: 820px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--line); }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.4rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.05rem;
+            font-weight: 600;
+            font-family: 'Fraunces', serif;
+            color: var(--ink);
+        }
+        .faq-question .icon { font-size: 1.4rem; color: var(--bronze); transition: transform 0.25s var(--ease); flex-shrink: 0; margin-left: 1rem; }
+        .faq-item.open .faq-question .icon { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s var(--ease); }
+        .faq-answer p { padding-bottom: 1.4rem; color: var(--muted); font-size: 0.98rem; max-width: 680px; }
+
+        /* ============ CTA FINAL ============ */
+        .cta-final-section {
+            padding: 6rem 5%;
+            background: linear-gradient(rgba(20, 24, 22, 0.88), rgba(20, 24, 22, 0.82)), url('toldos/prinTOLDO.webp');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-final-section h2 { color: var(--white); font-size: clamp(1.9rem, 3.6vw, 2.6rem); margin-bottom: 1rem; }
+        .cta-final-section p { font-size: 1.1rem; max-width: 620px; margin: 0 auto 2.2rem auto; opacity: 0.9; }
+        .badge-guarantee {
+            display: inline-block;
+            margin-top: 1.6rem;
+            padding: 0.5rem 1.3rem;
+            border: 1px solid rgba(255,255,255,0.28);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            background: rgba(255,255,255,0.04);
+        }
+
+        /* ============ FOOTER ============ */
+        footer { background-color: var(--ink); color: #b9b4a6; padding: 3.5rem 5% 2rem 5%; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1180px;
+            margin: 0 auto 2.5rem auto;
+        }
+        .footer-grid h4 { color: var(--white); font-family: 'Fraunces', serif; font-size: 1.05rem; margin-bottom: 1rem; }
+        .footer-grid ul { list-style: none; }
+        .footer-grid li { margin-bottom: 0.6rem; font-size: 0.92rem; }
+        .footer-grid a { text-decoration: none; color: #b9b4a6; }
+        .footer-grid a:hover { color: var(--bronze); }
+        .footer-bottom { text-align: center; font-size: 0.85rem; padding-top: 1.6rem; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto; }
+
+        /* ============ WHATSAPP FLOAT ============ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            background-color: var(--whatsapp);
+            color: white;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            z-index: 2000;
+            transition: transform 0.25s var(--ease), background-color 0.25s var(--ease);
+            text-decoration: none;
+        }
+        .whatsapp-float:hover { transform: scale(1.08); background-color: var(--whatsapp-deep); }
+        .whatsapp-float svg { width: 30px; height: 30px; fill: white; }
+
+        /* ============ MOBILE ============ */
+        @media (max-width: 860px) {
+            .nav-links, header .btn-header { display: none; }
+            .menu-toggle { display: block; }
+            nav.main-nav.mobile-open {
+                display: flex;
+                position: fixed;
+                top: 76px; left: 0; right: 0;
+                background: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 5% 2rem 5%;
+                border-bottom: 1px solid var(--line);
+                gap: 1.4rem;
+            }
+            nav.main-nav.mobile-open .nav-links { flex-direction: column; gap: 1.2rem; display: flex; }
+            nav.main-nav.mobile-open .btn-header { display: inline-block; }
+        }
+
+        @media (max-width: 768px) {
+            .hero { min-height: 76vh; padding-bottom: 3rem; }
+            .carousel-slide { height: 260px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#top" class="logo">STOL<span>PAV</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-links">
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="https://wa.me/5500000000000?text=Olá, vim pelo site e gostaria de uma consultoria para um projeto premium." class="btn-header" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="top">
+        <div class="hero-content">
+            <span class="eyebrow">Toldos e coberturas de engenharia</span>
+            <h1>Proteção inteligente para arquitetura sofisticada</h1>
+            <p>Projetamos e instalamos toldos e coberturas sob medida que unem conforto térmico, durabilidade e acabamento de alto padrão — do orçamento à instalação final.</p>
+            <div class="hero-actions">
+                <a href="https://wa.me/5500000000000?text=Olá, vim pelo site e gostaria de agendar uma análise técnica para meu ambiente." class="btn-cta" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    Solicitar análise técnica
+                </a>
+                <div class="hero-proof"><strong>+500</strong>projetos instalados</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stripe-divider"></div>
+
+    <!-- ================= CATÁLOGO RESUMO ================= -->
+    <section class="catalog-summary" id="produtos">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="kicker">Catálogo</span>
+                <h2>Cinco soluções, um único padrão de acabamento</h2>
+                <p>Cada modelo é fabricado sob medida para o seu espaço. Escolha o formato que melhor se encaixa na sua fachada, varanda ou área externa.</p>
+            </div>
+            <div class="catalog-grid">
+                <a href="#toldo-cortina" class="catalog-card">
+                    <div class="thumb"><img src="toldos/cortina-010.webp" alt="Toldo Cortina Retrátil" loading="lazy"></div>
+                    <div class="body">
+                        <h3>Cortina Retrátil</h3>
+                        <p>Fechamento vertical total, barreira contra vento e chuva.</p>
+                        <span class="go">Ver detalhes →</span>
+                    </div>
+                </a>
+                <a href="#toldo-cortina-braco" class="catalog-card">
+                    <div class="thumb"><img src="toldos/cortina-brac01.webp" alt="Toldo Cortina com Braço Pivotante" loading="lazy"></div>
+                    <div class="body">
+                        <h3>Cortina com Braço</h3>
+                        <p>Projeção ajustável para sombra além da fachada.</p>
+                        <span class="go">Ver detalhes →</span>
+                    </div>
+                </a>
+                <a href="#toldo-capota" class="catalog-card">
+                    <div class="thumb"><img src="toldos/capota-09.webp" alt="Toldo Capota Europeia" loading="lazy"></div>
+                    <div class="body">
+                        <h3>Capota Europeia</h3>
+                        <p>Design clássico semi-curvo para janelas e entradas.</p>
+                        <span class="go">Ver detalhes →</span>
+                    </div>
+                </a>
+                <a href="#toldo-articulado" class="catalog-card">
+                    <div class="thumb"><img src="toldos/articulado02.webp" alt="Toldo Articulado Premium" loading="lazy"></div>
+                    <div class="body">
+                        <h3>Articulado Premium</h3>
+                        <p>Braços pantográficos sem pilares, sombra livre.</p>
+                        <span class="go">Ver detalhes →</span>
+                    </div>
+                </a>
+                <a href="#toldo-fixo" class="catalog-card">
+                    <div class="thumb"><img src="toldos/fixo01.webp" alt="Cobertura Fixa de Engenharia" loading="lazy"></div>
+                    <div class="body">
+                        <h3>Cobertura Fixa</h3>
+                        <p>Estrutura permanente para garagens e corredores.</p>
+                        <span class="go">Ver detalhes →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= DIFERENCIAIS ================= -->
+    <section class="features" id="diferenciais">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="kicker">Por que a STOLPAV</span>
+                <h2>Engenharia e acabamento em cada detalhe</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2l8 3.5v5.2c0 5-3.4 9.4-8 10.8-4.6-1.4-8-5.8-8-10.8V5.5L12 2z" stroke-linejoin="round"/></svg></div>
+                    <h3>Materiais de alta resistência</h3>
+                    <p>Alumínio estrutural, lonas náuticas e tecidos com proteção UV certificada para durar sob qualquer clima.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round"/></svg></div>
+                    <h3>Prazo de entrega definido</h3>
+                    <p>Da medição à instalação, cada etapa tem prazo combinado por escrito — sem surpresas no cronograma.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 21V9l8-6 8 6v12" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke-linejoin="round"/></svg></div>
+                    <h3>Projeto 100% sob medida</h3>
+                    <p>Cada estrutura é dimensionada para a arquitetura real do seu espaço, sem soluções genéricas de prateleira.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 15a4 4 0 100-8 4 4 0 000 8z"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/></svg></div>
+                    <h3>Instalação especializada</h3>
+                    <p>Equipe própria treinada, sem terceirização — mesma responsabilidade do projeto até a fixação final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRODUTOS DETALHADOS ================= -->
+    <section class="product-section" id="toldo-cortina">
+        <div class="product-container">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track1" aria-label="Anterior">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track1">
+                        <li class="carousel-slide"><img src="toldos/cortina-010.webp" alt="Toldo Cortina 1" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina02.webp" alt="Toldo Cortina 2" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina03.webp" alt="Toldo Cortina 3" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina-011.webp" alt="Toldo Cortina 4" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina-012.webp" alt="Toldo Cortina 5" loading="lazy"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track1" aria-label="Próximo">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-content">
+                <span class="tag">Residencial · Comercial</span>
+                <h3>Toldo Cortina Retrátil</h3>
+                <p>O Toldo Cortina retrátil vertical oferece o equilíbrio entre visibilidade e proteção total contra intempéries. Com travas de precisão, atua como barreira térmica que protege contra vento, chuva e sol, mantendo o requinte do espaço.</p>
+                <ul class="specs-list">
+                    <li>Alumínio estrutural reforçado com pintura eletrostática</li>
+                    <li>Lonas vinílicas impermeáveis, acrílico náutico ou tela screen</li>
+                    <li>Ideal para varandas, sacadas e áreas gourmet</li>
+                    <li>Fixação robusta com projeto 100% personalizado</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Cortina Retrátil." class="btn-outline" target="_blank" rel="noopener noreferrer">Solicitar análise técnica</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section alt" id="toldo-cortina-braco">
+        <div class="product-container reverse-layout">
+            <div class="product-content">
+                <span class="tag">Residencial · Comercial</span>
+                <h3>Toldo Cortina com Braço Pivotante</h3>
+                <p>Une a praticidade do fechamento vertical com braços projetáveis de regulagem fina, estendendo a sombra além da fachada. Mantém a ventilação e o controle térmico, bloqueando o sol angular sem obstruir a vista.</p>
+                <ul class="specs-list">
+                    <li>Braços de alumínio anodizado anti-deformação</li>
+                    <li>Lonas vinílicas de alta densidade ou tela microperfurada</li>
+                    <li>Regulagem fina de inclinação e estabilidade contra vento</li>
+                    <li>Acionamento manual leve ou automatizado por controle</li>
+                    <li>Proteção UV certificada que preserva o mobiliário</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Cortina com Braço." class="btn-outline" target="_blank" rel="noopener noreferrer">Solicitar análise técnica</a>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track_cortina_braco" aria-label="Anterior">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track_cortina_braco">
+                        <li class="carousel-slide"><img src="toldos/cortina-brac01.webp" alt="Toldo Cortina com Braço 1" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina-braco014.webp" alt="Toldo Cortina com Braço 2" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/cortina-brac03.webp" alt="Toldo Cortina com Braço 3" loading="lazy"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track_cortina_braco" aria-label="Próximo">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section" id="toldo-capota">
+        <div class="product-container">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track2" aria-label="Anterior">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track2">
+                        <li class="carousel-slide"><img src="toldos/capota-09.webp" alt="Toldo Capota 1" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/capota-07.webp" alt="Toldo Capota 2" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/capota03.webp" alt="Toldo Capota 3" loading="lazy"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track2" aria-label="Próximo">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-content">
+                <span class="tag">Residencial · Fachadas</span>
+                <h3>Toldo Capota Europeia</h3>
+                <p>O design semi-curvo ou quadrado molda-se às linhas arquitetônicas de janelas e entradas. Cria uma barreira térmica de alto desempenho, reduzindo a temperatura interna e agregando charme atemporal à fachada.</p>
+                <ul class="specs-list">
+                    <li>Alumínio calandrado, imune à oxidação e corrosão salina</li>
+                    <li>Lonas vinílicas brilhantes, foscas ou acrílico têxtil</li>
+                    <li>Versões fixas ou totalmente recolhíveis</li>
+                    <li>Acionamento manual ou motorizado integrado</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Capota Europeia." class="btn-outline" target="_blank" rel="noopener noreferrer">Solicitar análise técnica</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section alt" id="toldo-articulado">
+        <div class="product-container reverse-layout">
+            <div class="product-content">
+                <span class="tag">Terraços · Comercial</span>
+                <h3>Toldo Articulado Premium</h3>
+                <p>Para terraços, piscinas e fachadas comerciais. Os braços pantográficos abrem paralelamente ao solo sem pilares, mantendo a circulação livre. Recolhido, o sistema mantém a lona embutida de forma limpa e discreta.</p>
+                <ul class="specs-list">
+                    <li>Braços articulados com cabos internos de alta tração</li>
+                    <li>Lonas náuticas importadas, anti-UV e repelentes à água</li>
+                    <li>Estrutura em alumínio estrutural com pintura eletrostática</li>
+                    <li>Acionamento manual ou automatizado com sensores climáticos</li>
+                    <li>Projeto sob medida focado na pureza das linhas visuais</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo Articulado Premium." class="btn-outline" target="_blank" rel="noopener noreferrer">Solicitar análise técnica</a>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track3" aria-label="Anterior">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track3">
+                        <li class="carousel-slide"><img src="toldos/articulado02.webp" alt="Toldo Articulado 1" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/articulado05.webp" alt="Toldo Articulado 2" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/articulado06.webp" alt="Toldo Articulado 3" loading="lazy"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track3" aria-label="Próximo">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-section" id="toldo-fixo">
+        <div class="product-container">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev-btn" data-target="track4" aria-label="Anterior">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track" id="track4">
+                        <li class="carousel-slide"><img src="toldos/fixo01.webp" alt="Toldo Fixo 1" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/fixo03.webp" alt="Toldo Fixo 2" loading="lazy"></li>
+                        <li class="carousel-slide"><img src="toldos/fixo05.webp" alt="Toldo Fixo 3" loading="lazy"></li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn" data-target="track4" aria-label="Próximo">&#10095;</button>
+                <div class="carousel-dots"></div>
+            </div>
+            <div class="product-content">
+                <span class="tag">Garagens · Corredores · Comercial</span>
+                <h3>Toldo e Cobertura Fixa de Engenharia</h3>
+                <p>Desenvolvidos para coberturas permanentes que exigem máxima resistência estrutural. Ideais para proteger corredores, garagens e entradas, oferecendo blindagem definitiva sem abrir mão da luminosidade natural.</p>
+                <ul class="specs-list">
+                    <li>Alumínio reforçado com soldas de altíssima fusão</li>
+                    <li>Lonas opacas (blackout), translúcidas ou policarbonato</li>
+                    <li>Pintura automotiva ou eletrostática microtexturizada</li>
+                    <li>Sistemas integrados de escoamento de água</li>
+                </ul>
+                <a href="https://wa.me/5500000000000?text=Tenho interesse no Toldo ou Cobertura Fixa." class="btn-outline" target="_blank" rel="noopener noreferrer">Solicitar análise técnica</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="stripe-divider"></div>
+
+    <!-- ================= GALERIA ================= -->
+    <section class="gallery" id="projetos">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="kicker">Portfólio</span>
+                <h2>Projetos entregues</h2>
+                <p>Uma amostra de instalações realizadas em residências e empreendimentos comerciais.</p>
+            </div>
+            <div class="gallery-grid">
+                <a href="toldos/cortina-010.webp" target="_blank"><img src="toldos/cortina-010.webp" alt="Projeto instalado 1" loading="lazy"></a>
+                <a href="toldos/articulado02.webp" target="_blank" class="g-tall"><img src="toldos/articulado02.webp" alt="Projeto instalado 2" loading="lazy"></a>
+                <a href="toldos/capota-09.webp" target="_blank"><img src="toldos/capota-09.webp" alt="Projeto instalado 3" loading="lazy"></a>
+                <a href="toldos/fixo01.webp" target="_blank"><img src="toldos/fixo01.webp" alt="Projeto instalado 4" loading="lazy"></a>
+                <a href="toldos/cortina-brac01.webp" target="_blank"><img src="toldos/cortina-brac01.webp" alt="Projeto instalado 5" loading="lazy"></a>
+                <a href="toldos/articulado05.webp" target="_blank"><img src="toldos/articulado05.webp" alt="Projeto instalado 6" loading="lazy"></a>
+                <a href="toldos/fixo03.webp" target="_blank" class="g-tall"><img src="toldos/fixo03.webp" alt="Projeto instalado 7" loading="lazy"></a>
+                <a href="toldos/capota-07.webp" target="_blank"><img src="toldos/capota-07.webp" alt="Projeto instalado 8" loading="lazy"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= DEPOIMENTOS ================= -->
+    <section class="testimonials" id="depoimentos">
+        <div class="wrap">
+            <div class="section-header center">
+                <span class="kicker">Depoimentos</span>
+                <h2>O que os clientes dizem</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>O toldo articulado transformou nosso terraço. A equipe cumpriu o prazo combinado e o acabamento ficou impecável.</p>
+                    <div class="author">Renata A.</div>
+                    <div class="location">Brasília, DF</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>Contratamos a cobertura fixa para a garagem do prédio. Processo transparente, do orçamento à instalação.</p>
+                    <div class="author">Marcos T.</div>
+                    <div class="location">Águas Claras, DF</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>O toldo cortina resolveu o problema de vento na varanda. Material de ótima qualidade e atendimento atencioso.</p>
+                    <div class="author">Fernanda L.</div>
+                    <div class="location">Lago Sul, DF</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROCESSO ================= -->
+    <section class="process-section">
+        <div class="wrap">
+            <div class="section-header">
+                <span class="kicker">Como funciona</span>
+                <h2>Do orçamento à instalação</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Solicite o orçamento</h3>
+                    <p>Envie fotos e medidas aproximadas do espaço pelo WhatsApp para uma estimativa inicial.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Medição no local</h3>
+                    <p>Um técnico visita o espaço para medição precisa e definição do modelo ideal.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Fabricação sob medida</h3>
+                    <p>A estrutura e a lona são fabricadas conforme o projeto aprovado, com prazo definido.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Instalação especializada</h3>
+                    <p>Equipe própria realiza a instalação e faz o teste final de funcionamento com você.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="faq-section" id="faq">
+        <div class="section-header">
+            <span class="kicker">Dúvidas frequentes</span>
+            <h2>Perguntas comuns</h2>
+        </div>
+
+        <div class="faq-item open">
+            <button class="faq-question">Qual a garantia dos toldos e coberturas?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Todos os projetos possuem garantia contratual sobre a estrutura e a costura das lonas, com prazo informado no orçamento conforme o modelo escolhido.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Quais as formas de pagamento aceitas?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Trabalhamos com Pix, cartão em até 12x e boleto para projetos comerciais. As condições são definidas junto ao orçamento final.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Qual o prazo médio de entrega?</span><span class="icon">+</span></button>
+            <div class="faq-answer"><p>O prazo varia conforme o modelo e a complexidade do projeto, geralmente entre 15 e 30 dias úteis após a aprovação da medição.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">É necessário fazer manutenção periódica?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Recomendamos limpeza simples da lona a cada poucos meses e uma revisão anual dos mecanismos, especialmente em modelos motorizados.</p></div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Vocês atendem outras cidades além de Brasília?<span class="icon">+</span></button>
+            <div class="faq-answer"><p>Sim, atendemos o Distrito Federal e entorno. Para outras regiões, consulte disponibilidade diretamente pelo WhatsApp.</p></div>
+        </div>
+    </section>
+
+    <!-- ================= CTA FINAL ================= -->
+    <section class="cta-final-section">
+        <h2>Pronto para transformar seu espaço?</h2>
+        <p>Fale com um especialista e receba uma análise técnica gratuita para o seu projeto.</p>
+        <a href="https://wa.me/5500000000000?text=Olá, gostaria de agendar uma consultoria técnica para um projeto sob medida." class="btn-cta" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Falar com um especialista
+        </a>
+        <div class="badge-guarantee">Garantia contratual · Equipe própria de instalação</div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>STOLPAV</h4>
+                <p style="font-size:0.9rem; max-width: 260px;">Toldos e coberturas de alto padrão, projetados e instalados sob medida.</p>
+            </div>
+            <div>
+                <h4>Produtos</h4>
+                <ul>
+                    <li><a href="#toldo-cortina">Cortina Retrátil</a></li>
+                    <li><a href="#toldo-cortina-braco">Cortina com Braço</a></li>
+                    <li><a href="#toldo-capota">Capota Europeia</a></li>
+                    <li><a href="#toldo-articulado">Articulado Premium</a></li>
+                    <li><a href="#toldo-fixo">Cobertura Fixa</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Regiões atendidas</h4>
+                <ul>
+                    <li>Brasília — DF</li>
+                    <li>Águas Claras</li>
+                    <li>Lago Sul e Lago Norte</li>
+                    <li>Entorno do DF</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 STOLPAV Toldos e Coberturas de Alto Padrão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5500000000000?text=Olá, gostaria de agendar uma consultoria técnica para um projeto sob medida." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.761-1.653-2.059-2.386-.297-.732-.031-.663.211-.966.107-.147.297-.421.446-.595.148-.198.198-.297.297-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <script>
+        // ===== Menu mobile =====
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mainNav.classList.toggle('mobile-open');
+            menuToggle.classList.toggle('open', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('mobile-open');
+                menuToggle.classList.remove('open');
+            });
+        });
+
+        // ===== Carrosséis independentes (com dots e suporte a arraste) =====
+        document.querySelectorAll('.carousel-wrapper').forEach(carousel => {
+            const track = carousel.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = carousel.querySelector('.next-btn');
+            const prevButton = carousel.querySelector('.prev-btn');
+            const dotsContainer = carousel.querySelector('.carousel-dots');
+            let currentIndex = 0;
+
+            slides.forEach((_, i) => {
+                const dot = document.createElement('span');
+                if (i === 0) dot.classList.add('active');
+                dotsContainer.appendChild(dot);
+            });
+            const dots = Array.from(dotsContainer.children);
+
+            function updateCarousel() {
+                const slideWidth = slides[0].getBoundingClientRect().width;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+            }
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+                updateCarousel();
+            });
+
+            // arraste (touch/mouse)
+            let startX = 0, isDragging = false;
+            track.addEventListener('pointerdown', e => { isDragging = true; startX = e.clientX; });
+            track.addEventListener('pointerup', e => {
+                if (!isDragging) return;
+                isDragging = false;
+                const delta = e.clientX - startX;
+                if (delta > 40) prevButton.click();
+                else if (delta < -40) nextButton.click();
+            });
+
+            window.addEventListener('resize', updateCarousel);
+        });
+
+        // ===== FAQ Acordeão =====
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            if (item.classList.contains('open')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item.open').forEach(openItem => {
+                    if (openItem !== item) {
+                        openItem.classList.remove('open');
+                        openItem.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+                item.classList.toggle('open', !isOpen);
+                answer.style.maxHeight = !isOpen ? answer.scrollHeight + 'px' : null;
+            });
+        });
+
+        // ===== Rastreamento de cliques WhatsApp (GTM / GA4) =====
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Clique de Conversão WhatsApp detectado!');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
